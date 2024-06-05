@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device=width, initial-scale=1.0">
+<title>Hobbies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Afacad:wght@500&family=Bebas+Neue&family=Cinzel+Decorative:wght@400;700&family=Crimson+Text:wght@600&family=DM+Serif+Display&family=Delicious+Handrawn&family=Gloria+Hallelujah&family=Josefin+Sans:wght@400;500&family=Jost:wght@500&family=League+Spartan:wght@500&family=Love+Ya+Like+A+Sister&family=Merienda&family=Nanum+Pen+Script&family=PT+Serif&family=Poppins:wght@600&family=Redressed&family=Rouge+Script&family=Schoolbell&family=Silkscreen&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="style.css">
+</head>
+<style>
+:root{
+--main-color: #d3ad7f;
+--black: #13131a;
+--bg: #010103;
+--border: .1rem solid rgba(255,255,255,.3);
+--border: .1rem solid rgba(0,0,0,.1);
+--border-hover: .1rem solid var(--black);
+--box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+box-sizing: border-box;
+outline: none; border: none;
+text-decoration: none;
+text-transform: capitalize;
+transition: .2s linear;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F2D5FC;
+}
+
+header {
+  background: url('image/header 1.jpg');
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+.container { display: inline-block; }
+
+.text {
+  font-size: 40px;
+  letter-spacing: 8px;
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  border-right: 5px solid;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation:
+       typing 2s,
+       cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+  50% { border-color: transparent; }
+}
+
+@keyframes typing {
+  from { width: 0; }
+}
+
+.topnav {
+  display: flex;
+  justify-content: center; /* Center the navigation links */
+  align-items: center; /* Center the navigation links vertically */
+  background-color: #333;
+  overflow: hidden;
+  font-family: "Jost", sans-serif;
+}
+
+.topnav a {
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  color: #f2f2f2;
+  text-align: center;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #C95DEF;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.hobbies-container {
+  display: flex;
+  justify-content: center; /* Center the hobby sections */
+  align-items: flex-start; /* Align the hobby sections at the start of the container */
+  flex-wrap: wrap; /* Wrap the sections if they don't fit in one row */
+  padding: 20px;
+}
+
+.hobby-section {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  max-width: 45%; /* Make sure the sections don't exceed 45% of the container's width */
+}
+
+.hobby-section h2 {
+  margin-bottom: 20px;
+}
+
+.hobby-section img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.hobby-section p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.hobby-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.hobby-icons i {
+  font-size: 30px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.hobby-icons i:hover {
+  color: #C95DEF;
+}
+
+.hobbies-container1 {
+  display: flex;
+  justify-content: center; /* Center the hobby sections */
+  align-items: flex-start; /* Align the hobby sections at the start of the container */
+  flex-wrap: wrap; /* Wrap the sections if they don't fit in one row */
+  padding: 20px;
+}
+
+.hobby-section {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  max-width: 45%; /* Make sure the sections don't exceed 45% of the container's width */
+}
+
+.hobby-section h2 {
+  margin-bottom: 20px;
+}
+
+.hobby-section img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.hobby-section p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.hobby-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.hobby-icons i {
+  font-size: 30px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.hobby-icons i:hover {
+  color: #C95DEF;
+}
+
+
+
+
+
+
+
+.bookyear .bookyear-slider .box{
+border: var(--border);
+padding: 1rem;
+text-align: center;
+background: linear-gradient(15deg, #fff 100%, #fff 100%);
+}
+
+.bookyear .bookyear-slider .box:hover{
+border: var(--border-hover);
+}
+
+.bookyear .bookyear-slider .box img{
+height: 18rem;
+width: 13rem;
+}
+
+.bookyear .bookyear-slider .box h3{
+color: var(--black);
+font-size: 1.2rem;
+padding: 1rem 0;
+font-family: 'Poppins', sans-serif;
+}
+
+.bookyear .bookyear-slider .box p{
+color: #333;
+font-size: 0.8rem;
+padding: 1rem 0;
+line-height: 2;
+font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<header>
+ <div class="container">
+  <p class="text">Hobbies</p>
+ </div>
+</header>
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html">Home</a>
+  <a href="aboutme.html">About Me</a>
+  <a href="myfamily.html">My Family</a>
+  <a href="myfriends.html">My Friends</a>
+  <a href="hobbies.html" class="active">Hobbies</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="socialmedia.html">Social Media</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<div class="hobbies-container">
+  <div class="hobby-section">
+    <h2>Reading</h2>
+    <img src="image/reading.jpg" alt="Reading">
+    <p>Reading is a great way to expand knowledge and escape into different worlds.</p>
+    <div class="hobby-icons">
+      <i class="fas fa-book"></i>
+      <i class="fas fa-book-reader"></i>
+      <i class="fas fa-glasses"></i>
+    </div>
+  </div>
+</div>
+
+<section class="bookyear" id="bookyear">
+<div class="swiper bookyear-slider">
+<div class="swiper-wrapper">
+
+<div class="swiper-slide box">
+<img src="image/welcomehome.jpg" alt="">
+<h3>Welcome Home</h3>
+<p>"Welcome Home" by Najwa Zebian was published in 2020. It's a book of poetry and prose about finding belonging, discovering oneself, and healing. Zebian's heartfelt writing encourages readers to embrace their vulnerabilities and find strength in their own stories. It's a comforting and empowering journey towards self-acceptance and inner peace.</p>
+</div>
+
+<div class="swiper-slide box">
+<img src="image/agentlereminder.jpg" alt="">
+<h3>A Gentle Reminder </h3>
+<p>"A Gentle Reminder" by Najwa Zebian was published in 2018, offering readers more than just quotes—it's a beacon of hope and wisdom. Through its pages, Zebian gently nudges readers towards self-love, resilience, and personal growth, like having a supportive friend guiding you through life's ups and downs.</p>
+</div>
+
+<div class="swiper-slide box">
+<img src="image/themountainisyou.jpg" alt="">
+<h3>The Mountain Is You</h3>
+<p>"The Mountain is You" by Brianna Wiest was published on April 25, 2021, making it a recent addition to the self-help genre. Offering both insights and practical guidance for personal growth and empowerment, this book is a valuable resource for anyone seeking to navigate life's challenges and unlock their fullest potential.</p>
+</div>
+
+<div class="swiper-slide box">
+<img src="image/iwanttoeat.jpg" alt="">
+<h3>I Want to Die but I Want to Eat Tteokbokki</h3>
+<p>"I Want to Die But I Want to Eat Tteokbokki" is a biography by Baek Sehee, published by Bloomsbury Publishing in 2022. It follows Baek, a young social media director, as she battles depression and self-doubt. Through conversations with her psychiatrist, she explores her struggles and finds comfort in her favorite street food, tteokbokki.</p>
+</div>
+
+<div class="swiper-slide box">
+<img src="image/imgladmymomdied.png" alt="">
+<h3>I'm Glad My Mom Died</h3>
+<p>I'm Glad My Mom Died" is a memoir by Jennette McCurdy, an American writer. It's based on her one-woman show and talks about her childhood acting career and difficult relationship with her abusive mother, who passed away in 2013. The book, McCurdy's first, was published by Simon & Schuster on August 9, 2022.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<div class="hobbies-container1">
+<div class="hobby-section">
+    <h2>Watching Movies</h2>
+    <img src="image/watchingmovies1.jpg" alt="Watching Movies">
+    <p>Watching movies is a fun way to relax and enjoy different stories and genres.</p>
+    <div class="hobby-icons">
+      <i class="fas fa-film"></i>
+      <i class="fas fa-tv"></i>
+      <i class="fas fa-popcorn"></i>
+    </div>
+  </div>
+</div>
+
+<section class="bookyear" id="bookyear">
+<div class="swiper bookyear-slider">
+<div class="swiper-wrapper">
+
+<div class="swiper-slide box">
+<img src="image/thegirlonthetrain.jpg" alt="">
+<h3>The Girl On The Train</h3>
+<p>"The Girl on the Train" is a psychological thriller film based on the bestselling novel by Tate Taylor. Rachel Watson becomes entangled in a missing person investigation after witnessing a couple from the train. As she delves deeper into the mystery, she uncovers dark secrets and faces her own demons, ultimately delivering suspense, redemption, and psychological depth.</p>
+</div>
+
+<div class="swiper-slide box">
+<img src="image/us.jpg" alt="">
+<h3>Us</h3>
+<p>"Us" is a horror-thriller film directed by Jordan Peele. The Wilson family encounters terrifying doppelgängers while on vacation. These sinister doubles, known as "The Tethered," are determined to kill their counterparts. As the Wilsons fight for survival, they uncover disturbing truths. With its eerie atmosphere, thought-provoking themes, and twists, "Us" delivers chilling experience.</p>
+</div>
+
+<div class="swiper-slide box">
+<img src="image/shutterisland.jpeg" alt="">
+<h3>Shutter Island</h3>
+<p>"Shutter Island" is a gripping psychological thriller directed by Martin Scorsese, adapted from Dennis Lehane's novel. U.S. Marshal Teddy Daniels embarks on a harrowing investigation into a patient's disappearance from a remote psychiatric facility on Shutter Island. With its eerie atmosphere, complex characters, and unexpected twists, "Shutter Island" keeps viewers captivated until the shocking conclusion.</p>
+</div>
+
+<div class="swiper-slide box">
+<img src="image/smile.jpg" alt="">
+<h3>Smile</h3>
+<p>"Smile" by Parker Finn follows Dr. Rose Cotter, a psychiatrist whose life is disrupted by a chilling incident involving a patient. As Rose confronts haunting visions and escalating paranoia, she unravels enigmatic events around her. With its intricate plot and compelling characters, "Smile" promises a captivating, suspenseful reading experience, brimming with twists and turns.</p>
+</div>
+
+<div class="swiper-slide box">
+<img src="image/malignant.jpg" alt="">
+<h3>Malignant</h3>
+<p>"Malignant" by James Wan follows Madison, a young woman plagued by haunting visions of strangers' murders. As these visions intensify, Madison is driven to uncover their truth and save the victims, revealing sinister revelations from her own past. With spine-chilling suspense, this horror-thriller promises readers a gripping journey into terror and mystery, keeping them on the edge until the end.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+ var swiper = new Swiper(".bookyear-slider", {
+      spaceBetween: 10,
+	  grabCursor: true,
+      loop: true,
+      centeredSlides: true,
+      autoplay: {
+        delay: 9500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
